@@ -6,6 +6,7 @@
 - [Install](#install)
   - [Globally](#globally)
   - [Locally](#locally)
+- [Options](#options)
 - [API](#api)
   - [Usage](#usage)
   - [New entry](#new-entry)
@@ -36,6 +37,16 @@ The latest change was the use of [KDBX 4](https://www.npmjs.com/package/kdbxweb#
 ## Locally
 
 `npm i -D switchenv2` or `yarn add -D switchenv2`
+
+# Options
+
+| name         | value                            | required | comment                                                              |
+| ------------ | -------------------------------- | -------- | -------------------------------------------------------------------- |
+| -s, --source | Path to .kdbx file               | Yes      | -                                                                    |
+| -k, --key    | Path to .key/.keyx file          | Yes      | -                                                                    |
+| -g, --group  | Uuid of the entry's parent group | Yes      | -                                                                    |
+| -e, --entry  | Uuid of the entry                | No       | Use this if you have multiple entries with the same title            |
+| -p, --path   | Path to .env file                | No       | Use this if the .env file is not located in the root of your porject |
 
 # API
 
