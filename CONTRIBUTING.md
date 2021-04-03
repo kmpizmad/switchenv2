@@ -20,4 +20,4 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 Checkout our [code of conduct][code-of-conduct-link]
 
-[code-of-conduct-link]: https://github.com/kmpizmad/project-name/blob/main/CODE_OF_CONDUCT.md
+[code-of-conduct-link]: https://github.com/kmpizmad/switchenv2/blob/main/CODE_OF_CONDUCT.md
