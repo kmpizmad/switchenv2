@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import { existsSync, readFileSync } from 'fs';
-import { Credentials, CryptoEngine, Kdbx, ProtectedValue } from 'kdbxweb';
-import { argon2 } from './lib/argon2';
-import { toArrayBuffer } from './lib/buffer';
+import { existsSync } from 'fs';
+import { loadDatabase } from './core/loadDatabase';
 import { FileNotFoundException } from './lib/exceptions';
 import { switchenv2 } from './switchenv2';
 import { IOptions } from './types';
@@ -30,19 +28,10 @@ program
           `${options.source || options.key} not found`
         );
 
-      const data: ArrayBuffer = toArrayBuffer(readFileSync(options.source));
-      const key: ArrayBuffer = toArrayBuffer(readFileSync(options.key));
-
-      const credentials: Credentials = new Credentials(
-        ProtectedValue.fromBinary(new ArrayBuffer(0)),
-        key
+      loadDatabase(
+        options,
+        switchenv2(process.env.NODE_ENV || 'default', options)
       );
-
-      CryptoEngine.argon2 = argon2;
-
-      Kdbx.load(data, credentials)
-        .then(switchenv2(process.env.NODE_ENV || 'default', options))
-        .catch(e => console.log(e));
     } catch (ex) {
       console.log(ex.message);
     }

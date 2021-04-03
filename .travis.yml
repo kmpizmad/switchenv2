@@ -4,6 +4,5 @@ node_js:
   - node
 scripts:
   - yarn lint:fix
-  - yarn test:coveralls
 nofications:
   - email: false

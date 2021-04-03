@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.saveContent = exports.findEntry = exports.findGroup = void 0;
+exports.saveContent = exports.findEntry = exports.findGroup = exports.loadDatabase = void 0;
+var loadDatabase_1 = require("./loadDatabase");
+Object.defineProperty(exports, "loadDatabase", { enumerable: true, get: function () { return loadDatabase_1.loadDatabase; } });
 var findGroup_1 = require("./findGroup");
 Object.defineProperty(exports, "findGroup", { enumerable: true, get: function () { return findGroup_1.findGroup; } });
 var findEntry_1 = require("./findEntry");

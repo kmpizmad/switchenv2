@@ -4,12 +4,12 @@ import { toBuffer } from '../lib/buffer';
 import { findEntry } from './findEntry';
 import { EntityNotFoundException } from '../lib/exceptions';
 
-export const saveContent = (
+export function saveContent(
   source: string,
   db: Kdbx,
   group: Group,
   content: string
-): void => {
+): void {
   const name: string = 'default';
   let entry: Entry;
 
@@ -28,4 +28,4 @@ export const saveContent = (
   db.save()
     .then(data => writeFileSync(source, toBuffer(data)))
     .catch(e => console.log(e));
-};
+}

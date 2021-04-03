@@ -5,7 +5,7 @@ var fs_1 = require("fs");
 var buffer_1 = require("../lib/buffer");
 var findEntry_1 = require("./findEntry");
 var exceptions_1 = require("../lib/exceptions");
-var saveContent = function (source, db, group, content) {
+function saveContent(source, db, group, content) {
     var name = 'default';
     var entry;
     try {
@@ -23,5 +23,5 @@ var saveContent = function (source, db, group, content) {
     db.save()
         .then(function (data) { return fs_1.writeFileSync(source, buffer_1.toBuffer(data)); })
         .catch(function (e) { return console.log(e); });
-};
+}
 exports.saveContent = saveContent;

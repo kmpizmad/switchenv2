@@ -11,7 +11,7 @@ const config: Config.InitialOptions = {
   testPathIgnorePatterns: ['node_modules', 'build', '__coverage__'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverage: true,
-  collectCoverageFrom: ['**/*.ts', '!**/node_modules/**', '!**/build/**'],
+  collectCoverageFrom: ['**/core/**/*.ts', '!**/node_modules/**'],
   coverageThreshold: {
     global: {
       branches: 100,
