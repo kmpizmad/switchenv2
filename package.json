@@ -55,7 +55,7 @@
     "typescript": "^4.2.2"
   },
   "dependencies": {
-    "argon2": "^0.27.1",
+    "argon2": "^0.27.2",
     "chalk": "^4.1.0",
     "commander": "^7.2.0",
     "kdbxweb": "^1.14.4",
