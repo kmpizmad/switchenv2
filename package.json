@@ -56,7 +56,7 @@
   },
   "dependencies": {
     "argon2": "^0.27.1",
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.1",
     "commander": "^7.2.0",
     "kdbxweb": "^1.14.4",
     "lodash": "^4.17.21"
